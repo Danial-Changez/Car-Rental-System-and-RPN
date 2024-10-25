@@ -211,6 +211,8 @@ int main()
             printf("Invalid choice. Please try again.\n");
             break;
         }
+        sort_list(&available_head, true, false);
+        sort_list(&rented_head, false, true);
     } while (choice != 7); // Loop until the user chooses to exit
 
     // Free allocated memory for all linked lists
