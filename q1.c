@@ -42,6 +42,9 @@ int main()
         getchar();            // Clear the newline character from input
         printf("\n");
 
+        sort_list(&available_head, true, false);
+        sort_list(&rented_head, false, true);
+
         switch (choice)
         {
         case 1: // Option to add a new car to the available list
@@ -211,8 +214,6 @@ int main()
             printf("Invalid choice. Please try again.\n");
             break;
         }
-        sort_list(&available_head, true, false);
-        sort_list(&rented_head, false, true);
     } while (choice != 7); // Loop until the user chooses to exit
 
     // Free allocated memory for all linked lists
