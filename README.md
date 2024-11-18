@@ -1,30 +1,88 @@
-# CIS2520-F24-A2
+# Car Rental System and Reverse Polish Notation (RPN) Calculator
 
-## Student Information 
-Name : Danial Changez
+This project was developed as **Assignment 2** for the **CIS*2520 Data Structures** course at the University of Guelph. It encompasses two main components:
 
-Student Number : 1232341
+1. **Car Rental System:** A simulation of a car rental company utilizing data structures such as singly linked lists, stacks, and merge sort algorithms.
+2. **RPN Calculator:** An implementation of a Reverse Polish Notation calculator using stack data structures.
 
-## Assignment Overview
-What is the assignment about?  
-Explain the purpose of the program and what it accomplishes.
 
-The assignment involves creating a program that simulates a car rental company using linked lists to manage the cars. The purpose of the program is to efficiently organize cars into categories, such as available for rent, rented, and in repair, while allowing various transactions to update their statuses. It computes rental charges based on mileage and handles file operations for saving and loading data. Additionally, the program implements error handling for improved performance. Overall, this assignment provides experience in manipulating data structures.
+## Table of Contents
+1. [Data Structures and Algorithms](#data-structures-and-algorithms)
+2. [Car Rental System](#car-rental-system)
+   - [Features](#features)
+3. [RPN Calculator](#rpn-calculator)
+   - [Features](#features-1)
+4. [Installation and Usage](#installation-and-usage)
+5. [Resources](#resources)
 
-## Resources 
-Did you use any resources (for example book, notes etc) in this assignment?
+## Data Structures and Algorithms
 
-I used the slides detailing SLL(singly linked lists), stacks, and merge sort. Outside of class notes,
-I consulted online resources to better understand how to implement merge sort, string functions,
-error handling, file operations, and the ctype library. I've provided the links below to my sources.
+- **Singly Linked Lists:** Manage the dynamic lists of cars.
+- **Stacks:** Implement the RPN calculator and manage certain operations within the car rental system.
+- **Merge Sort:** Sort the car lists based on specific criteria.
 
-https://www.geeksforgeeks.org/merge-sort-for-linked-list/
-https://www.w3schools.com/c/c_ref_string.php
-https://www.w3schools.com/c/c_files_read.php
-https://www.w3schools.in/c-programming/error-handling
-https://www.tutorialspoint.com/isalnum-function-in-c-language#:~:text=The%20function%20isalnum()%20is,or%20number%20otherwise%2C%20returns%20zero.
 
-## Implementation
-Is the assignment complete? If not, mention what part of the assignment is missing or incomplete.
+## Car Rental System
 
-The assignment is complete.
+The Car Rental System is designed to manage a fleet of cars categorized into three lists efficiently:
+
+- **Available for Rent**
+- **Rented**
+- **In Repair**
+
+### Features
+
+- **Add New Cars:** Introduce new vehicles into the system.
+- **Rent Cars:** Move cars from the available list to the rented list.
+- **Return Cars:** Transition cars from rented to available or repair lists based on their condition.
+- **Transfer to Repair:** Shift cars from available or rented lists to the repair list.
+- **Transfer from Repair:** Move cars from the repair list back to the available list.
+- **Display Lists:** View the current status of all three car lists.
+- **Save and Load Data:** Persist and retrieve car lists to and from text files.
+
+
+## RPN Calculator
+
+The Reverse Polish Notation (RPN) Calculator evaluates mathematical expressions written in postfix notation. This component demonstrates the application of stack data structures.
+
+### Features
+
+- **Evaluate Expressions:** Compute results for valid RPN expressions.
+- **Error Handling:** Identify and report errors in invalid expressions.
+
+
+## Installation and Usage
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Danial-Changez/Car-Rental-System-and-RPN.git
+   ```
+   
+2. **Compile the Programs:**
+  ```bash
+  make
+  ```
+
+3. **Run the Car Rental System:**
+  ```bash
+  ./a2q1
+  ```
+
+4. **Run the RPN Calculator:**
+  - Sample test case provided
+  ```bash
+  ./a2q2 512+4*+3-
+  ```
+Note: Ensure you have a C compiler and make utility installed on your system.
+
+## Resources
+
+The following resources supported the development of this project:
+
+- **Course Materials:** Slides and notes on singly linked lists, stacks, and merge sort algorithms.
+- **Online References:**
+  - [Merge Sort for Linked List](https://www.geeksforgeeks.org/merge-sort-for-linked-list/)
+  - [C String Functions](https://www.w3schools.com/c/c_ref_string.php)
+  - [C File Handling](https://www.w3schools.com/c/c_files.php)
+  - [C Error Handling](https://www.w3schools.in/c-programming/error-handling)
+  - [C `isalnum()` Function](https://www.tutorialspoint.com/isalnum-function-in-c-language)
